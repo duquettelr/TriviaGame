@@ -122,7 +122,7 @@ function displayQandA(index) {
 
 function timeOut() {
     clearInterval(IntervalId);
-    displayWrongAnsScreen();
+    displayTimeOutScreen();
     numberIncorrect++;
 
     setTimeout(function () {
@@ -146,6 +146,16 @@ function displayCorrectAnsScreen() {
 
 function displayWrongAnsScreen() {
     $("#question").text("Oops! thats incorrect!");
+    $("#ans0").text("");
+    $("#ans1").text("");
+    $("#ans2").text("");
+    $("#ans3").text("");
+    $("#numberCorrect").html("");
+    $("#numberIncorrect").html("");
+};
+
+function displayTimeOutScreen() {
+    $("#question").text("Oops! time ran out!");
     $("#ans0").text("");
     $("#ans1").text("");
     $("#ans2").text("");
