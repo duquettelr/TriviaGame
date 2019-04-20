@@ -154,15 +154,34 @@ function displayWrongAnsScreen() {
     $("#numberIncorrect").html("");
 };
 
-function displayGameOverScreen() {
+function gameOverScreen() {
+    $("#question").text("Game Over");
+    $("#ans0").text("");
+    $("#ans1").text("");
+    $("#ans2").text("");
+    $("#ans3").text("");
+    $("#timer").text("");
+    $("#numberCorrect").html("Correct: " + numberCorrect);
+    $("#numberIncorrect").html("Incorrect: " + numberIncorrect);
+    clearInterval(IntervalId);
+    $("h2").off("click");
+    $(".btn").show();
 
+};
+
+function resetGame() {
+    questionNumber = 0;
+    numberIncorrect = 0;
+    numberCorrect = 0;
+    timer = 30;
 };
 
 
 
 $("button").on("click", function () {
 
-    $(".btn").remove();
+    resetGame();
+    $(".btn").hide();
     displayQandA(0);
 
     // var questionNumber = 0;
@@ -198,6 +217,13 @@ $("button").on("click", function () {
             setTimeout(function () {
                 displayQandA(questionNumber);
             }, 2000);
+        }
+
+        console.log(questionNumber);
+
+        if (questionNumber === 5) {
+            gameOverScreen();
+
         }
 
 
