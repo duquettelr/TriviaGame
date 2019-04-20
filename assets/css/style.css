@@ -6,11 +6,31 @@ body {
 
 
 .jumbotron {
+    font-family: Arial, Helvetica, sans-serif;
     background: lightslategray;
     color: white;
+    border-style: solid;
+    border-color: darkcyan;
+    border-width: 10px;
 }
 
+#question {
+    color: lightcyan;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+
 button {
-    width: 300px;
-    height: 200px;
+    width: 200px;
+    height: 100px;
+}
+
+#timer {
+    color: darkcyan;
+    background-color: whitesmoke;
+    width: 80px;
+    margin: auto;
 }
