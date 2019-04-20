@@ -91,6 +91,7 @@ var IntervalId;
 var numberCorrect = 0;
 var numberIncorrect = 0;
 var timer = 30;
+var questionNumber = 0;
 
 
 //this function displays the answers and question on the screen
@@ -127,6 +128,8 @@ function timeOut() {
     setTimeout(function () {
         displayQandA(questionNumber);
     }, 2000);
+
+    questionNumber++;
 }
 
 
@@ -162,7 +165,7 @@ $("button").on("click", function () {
     $(".btn").remove();
     displayQandA(0);
 
-    var questionNumber = 0;
+    // var questionNumber = 0;
 
     $("h2").on("click", function () {
 
