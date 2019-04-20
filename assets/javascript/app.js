@@ -130,6 +130,11 @@ function timeOut() {
     }, 2000);
 
     questionNumber++;
+
+    if (questionNumber === 5) {
+        gameOverScreen();
+
+    }
 }
 
 
